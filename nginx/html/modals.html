@@ -1,0 +1,211 @@
+<script type="text/javascript" src="./js/application.js"></script>
+
+<!--登陆弹窗 begin-->
+<div class="modal fade" id="signModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form class="modal-dialog form-horizontal login-form" id="formLogin" name="formLogin" >
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h5 class="modal-title">
+                登陆
+            </h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer text-center">
+            <input class="btn btn-primary btn-lg" type="submit" id="loginSubmit"  value="登录"/>
+            <a class="btn btn-default btn-lg" data-dismiss="modal">取消</a>
+        </div>
+    </form>
+</div>
+<!--登陆弹窗 end-->
+
+<!--注册弹窗 begin-->
+<div class="modal fade" id="registerModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form class="modal-dialog login-form form-horizontal" id="formRegister" name="formRegister">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h5 class="modal-title">
+                注册
+            </h5>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="inputEmail2" class="col-lg-2 control-label">邮箱</label>
+
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" id="inputEmail2" placeholder="请输入你的邮箱" name="email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail2" class="col-lg-2 control-label">用户名</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" placeholder="请输入你的用户名" id="registerName" name="nickName"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="registerPassword" class="col-lg-2 control-label">密码</label>
+
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" value="" placeholder="请输入你的密码" id="registerPassword" name="password"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">确认密码</label>
+
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" value="" placeholder="请再次输入你的密码"name="confirm_password"/>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer text-center">
+            <input class="btn btn-primary btn-lg" type="submit" id="registerSubmit" value="注册"/>
+            <a class="btn btn-default btn-lg" href="#" data-dismiss="modal">取消</a>
+        </div>
+    </form>
+</div>
+<!--注册弹窗 end-->
+
+
+<!--修改用户信息 begin-->
+<div class="modal fade" id="modifyView" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form class="modal-dialog form-horizontal login-form" id="userModify">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h5 class="modal-title">
+                修改用户信息
+            </h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="inputNickname" class="col-lg-2 control-label">Nickname</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputNickname" placeholder="nickname" name="nickName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+
+                <div class="col-lg-10">
+                    <input type="password" class="form-control"  placeholder="请输入你的密码" name="password" id="modifyPassword">
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-lg-2 control-label">确认密码</label>
+
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" value="" placeholder="请再次输入你的密码" name="confirm_password"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-footer text-center">
+            <input class="btn btn-primary btn-lg" type="submit" value="提交"/>
+            <a class="btn btn-default btn-lg" data-dismiss="modal">取消</a>
+        </div>
+    </form>
+</div>
+<!--修改用户信息 end-->
+
+<!--我的直播间 begin-->
+<div class="modal fade" id="myLiveRoomModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form class="modal-dialog login-form form-horizontal" id="liveRoomModify">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h5 class="modal-title">
+                我的直播间
+
+                <a class="btn btn-primary btn-sm" href=".." id="myLiveRoom">查看我的直播</a>
+
+            </h5>
+
+        </div>
+
+        <div class="modal-body">
+
+            <div class="form-group">
+                <label for="inputRoomName" class="col-lg-2 control-label">房间名</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" placeholder="请输入房间名" id="inputRoomName" name="roomName"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gameType" class="col-lg-2 control-label">游戏类型</label>
+
+                <div class="col-lg-10">
+                    <!--<div class="select select-primary" id="inputGameType" name="gameType">-->
+                        <select data-toggle="select" class="form-control select select-primary select-lg" id="gameType" name="gameType" form="liveRoomModify">
+                            <option value="0">请选择</option>
+                        </select>
+                    <!--</div>-->
+                </div>
+
+
+            </div>
+
+            <div class="form-group">
+                <label for="inputRoomDescription" class="col-lg-2 control-label">房间描述</label>
+
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="3" placeholder="请描述房间" id="inputRoomDescription"
+                              name="roomDescription"></textarea>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer text-center">
+            <input class="btn btn-primary btn-lg" type="submit" value="更新房间信息" id="myLiveRoomBtn"/>
+            <a class="btn btn-default btn-lg" data-dismiss="modal">取消</a>
+        </div>
+        <div class="modal-footer text-center">
+            <div class="form-group">
+                <label for="rtmpUrl" class="col-lg-2 control-label">rtmp</label>
+
+                <div class="col-lg-8 ">
+                    <input readonly type="text" class="form-control " id="rtmpUrl" name="rtmpUrl"/>
+                </div>
+                <div class="col-lg-2 ">
+                    <button  class="btn btn-primary  form-control text-white"id="copyRtmp">复制</button >
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="liveKey" class="col-lg-2 control-label">Key</label>
+
+                <div class="col-lg-8 ">
+                    <input readonly type="text" class="form-control" id="liveKey" name="liveKey" />
+                </div>
+                <div class="col-lg-2 ">
+                    <button  class="btn btn-primary  form-control text-white"  id="copyKey">复制</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<!--我的直播间 end-->
+<script type="text/javascript" src="./js/checkForm.js"></script>
