@@ -26,6 +26,11 @@
  2. `--rm` command means delete the container when it quit 
  3. `--add-host` command can add items to images'`/etc/hosts`
 
-    
-   
+#### Install private docker hub and use pull and push command
+ 1. CMD `docker pull distribution/registry:2`
+ 2. CMD `docker run -d -v /opt/registry:/var/lib/registry -p 5000:5000 --restart=always --name registry distribution/registry:2`
+ 3. Append `DOCKER_OPTS="--registry-mirror=http://ip:5000 --insecure-registry=ip:5000"` to `/etc/default/docker`
+ 4. CMD `docker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]`
+ 5. CMD `docker push [REGISTRYHOST/][USERNAME/]NAME[:TAG]`
+ 6. CMD `docker push [REGISTRYHOST/][USERNAME/]NAME[:TAG]` in another host
  
